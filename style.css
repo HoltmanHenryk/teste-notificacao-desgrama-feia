@@ -1,0 +1,47 @@
+﻿.positive_notification {
+    width: 150px;
+    height: 60px;
+    border-radius: 12px;
+    padding: 0 16px;
+    box-sizing: border-box;
+
+    background-color: #4caf50;
+    color: #ffffff;
+
+    font-size: 13px;
+    line-height: 1.2;
+
+    display: none; 
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.positive_notification.show {
+    display: flex;
+    animation: dropDownToast 3s ease forwards;
+}
+
+@keyframes dropDownToast {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    12% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    88% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+}
